@@ -62,7 +62,7 @@ public class LandLordTest {
     @Test
     public void postLandLord02() {
 
-        Landlord landlord = new Landlord("Paul", "Stevens", true);
+        Landlord landlord = new Landlord("Paul", "MMarris", true);
 
         String id = given()
                 .contentType(ContentType.JSON)
@@ -86,7 +86,7 @@ public class LandLordTest {
                 .body("id", is(id))
                 .body("firstName", is(landlord.getFirstName()))
                 .body("lastName", is(landlord.getLastName()))
-                .body("trusted", is(false))
+                .body("trusted", is(true))
                 .body("apartments", is(empty()));
 
     }
