@@ -16,21 +16,19 @@ public class LandLordTest {
         baseURI = "http://localhost:8080";
     }
 
-
     @Test
     public void getLandLords() {
 
-        when()
-                .get("/landlords")
-                .then()
-                .statusCode(200)
-                .body("", is(empty()));
+        when().get("/landlords").then().statusCode(200).body("", is(empty()));
     }
 
     @Test
     public void postLandLord01() {
 
-        Landlord landlord = new Landlord("Paul", "Stevens");
+        Landlord landlord = new Landlord("", "");
+
+        landlord.setFirstName();
+        landlord.setLastName();
 
         String id = given()
                 .contentType(ContentType.JSON)
@@ -62,7 +60,10 @@ public class LandLordTest {
     @Test
     public void postLandLord02() {
 
-        Landlord landlord = new Landlord("Paul", "MMarris", true);
+        Landlord landlord = new Landlord("", "", true);
+
+        landlord.setFirstName();
+        landlord.setLastName();
 
         String id = given()
                 .contentType(ContentType.JSON)
@@ -96,6 +97,8 @@ public class LandLordTest {
 
         Landlord landlord = new Landlord("", "");
 
+        landlord.setFirstName();
+
         given()
                 .contentType(ContentType.JSON)
                 .body(landlord)
@@ -113,7 +116,6 @@ public class LandLordTest {
 
     @Test
     public void putLandlord(){
-
 
         Landlord landlord = new Landlord("Mary", "Horse", true);
 
@@ -149,13 +151,15 @@ public class LandLordTest {
                 .body("lastName", is(landLordForUpdate.getLastName()))
                 .body("trusted", is(false));
 
-
     }
 
     @Test
     public void deleteLandlord01() {
 
-        Landlord landlord = new Landlord("Bill", "Stone");
+        Landlord landlord = new Landlord("", "");
+
+        landlord.setFirstName();
+        landlord.setLastName();
 
         String id = given()
                 .contentType(ContentType.JSON)
@@ -181,15 +185,6 @@ public class LandLordTest {
                 .then()
                 .statusCode(404)
                 .body("message", is("There is no landlord with id: " +id));
-
-
-
-
     }
-
-
-
-
-
 
 }

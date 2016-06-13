@@ -50,6 +50,12 @@
             <artifactId>cucumber-junit</artifactId>
             <version>1.2.4</version>
         </dependency>
+        <dependency>
+            <groupId>io.codearte.jfairy</groupId>
+            <artifactId>jfairy</artifactId>
+            <version>0.5.3</version>
+        </dependency>
+
     </dependencies>
 
 

@@ -11,10 +11,7 @@ import org.junit.runner.RunWith;
         // tags = {"@ikea,@skrill","~@wip","~@fail"}, strict = true)
         tags = {"@landlords"}, strict = true)
 
-
 public class CucumberRunner {
-
-
 
 
 }
