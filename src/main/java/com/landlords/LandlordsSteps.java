@@ -1,6 +1,5 @@
 package com.landlords;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.Given;
@@ -20,13 +19,20 @@ public class LandlordsSteps extends LandLordTest {
 
     }
 
+//    @Then("^I can add a new landlord via the api$")
+//    public void iCanAddNewLandlordViaTheApi() throws Throwable {
+//        landLordTest.postLandLord01();
+//    }
+
     @Then("^I can add a new landlord via the api$")
     public void iCanAddNewLandlordViaTheApi() throws Throwable {
         landLordTest.postLandLord01();
+
     }
 
     @And("^I see the correct (\\d+) status returned$")
-    public void iSeeTheCorrectStatusReturned(int status) throws Throwable {
+    public void iSeeTheCorrectStatusReturned(String status) throws Throwable {
+        landLordTest.returnStatusCode("");
 
     }
 }

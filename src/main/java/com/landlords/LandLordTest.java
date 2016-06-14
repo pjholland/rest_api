@@ -187,4 +187,11 @@ public class LandLordTest {
                 .body("message", is("There is no landlord with id: " +id));
     }
 
+    public void returnStatusCode(String status){
+        status = "5";
+
+    }
+
+
+
 }
