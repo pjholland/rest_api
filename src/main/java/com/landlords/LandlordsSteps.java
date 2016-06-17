@@ -19,20 +19,10 @@ public class LandlordsSteps extends LandLordTest {
 
     }
 
-//    @Then("^I can add a new landlord via the api$")
-//    public void iCanAddNewLandlordViaTheApi() throws Throwable {
-//        landLordTest.postLandLord01();
-//    }
-
     @Then("^I can add a new landlord via the api$")
     public void iCanAddNewLandlordViaTheApi() throws Throwable {
         landLordTest.postLandLord01();
 
     }
 
-    @And("^I see the correct (\\d+) status returned$")
-    public void iSeeTheCorrectStatusReturned(String status) throws Throwable {
-        landLordTest.returnStatusCode("");
-
-    }
 }

@@ -1,10 +1,13 @@
 package com.landlords.model;
 
+import io.codearte.jfairy.Fairy;
+
 public class Landlord {
 
     private String  firstName;
     private String  lastName;
     private Boolean trusted;
+    private String  status;
 
     public Landlord(){
     }
@@ -25,7 +28,8 @@ public class Landlord {
     }
 
     public void setFirstName(){
-        this.firstName = firstName;
+        Fairy fairy = Fairy.create();
+        this.firstName = fairy.person().firstName();
     }
 
     public  String getLastName(){
@@ -33,15 +37,21 @@ public class Landlord {
     }
 
     public void setLastName(){
-        this.lastName = lastName;
+        Fairy fairy = Fairy.create();
+        this.lastName = fairy.person().firstName();
+
     }
 
-    public Boolean getTrusted(){
+    public Boolean getTrusted() {
         return trusted;
     }
 
-    public void  setTrusted(Boolean trusted){
+    public void  setTrusted(Boolean trusted) {
         this.trusted = trusted;
+    }
+
+    public String getStatus(){
+        return status;
     }
 
 

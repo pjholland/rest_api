@@ -97,8 +97,6 @@ public class LandLordTest {
 
         Landlord landlord = new Landlord("", "");
 
-        landlord.setFirstName();
-
         given()
                 .contentType(ContentType.JSON)
                 .body(landlord)
@@ -111,7 +109,6 @@ public class LandLordTest {
                 .body("fieldErrorDTOs[0].fieldError",is("First name can not be empty"))
                 .body("fieldErrorDTOs[1].fieldName", is("lastName"))
                 .body("fieldErrorDTOs[1].fieldError",is("Last name can not be empty"));
-
     }
 
     @Test
@@ -150,7 +147,6 @@ public class LandLordTest {
                 .body("firstName", is(landLordForUpdate.getFirstName()))
                 .body("lastName", is(landLordForUpdate.getLastName()))
                 .body("trusted", is(false));
-
     }
 
     @Test
@@ -186,12 +182,5 @@ public class LandLordTest {
                 .statusCode(404)
                 .body("message", is("There is no landlord with id: " +id));
     }
-
-    public void returnStatusCode(String status){
-        status = "5";
-
-    }
-
-
 
 }
