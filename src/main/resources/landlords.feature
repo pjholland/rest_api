@@ -20,7 +20,7 @@ Feature: User can access the landlords api
     Then the update is visible on the system
 
   Scenario: The user is able to add a apartment for a landlord
-    When the user adds a landlord with an appartment
+    When the user adds a landlord with an apartment
     Then the apartment and landlord is added to the system
 
 

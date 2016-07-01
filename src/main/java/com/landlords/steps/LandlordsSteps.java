@@ -60,7 +60,7 @@ public class LandlordsSteps extends LandLordTest {
 
     }
 
-    @When("^the user adds a landlord with an appartment$")
+    @When("^the user adds a landlord with an apartment$")
     public void theUserAddsALandlordWithAnAppartment() throws Throwable {
         landlord.postSingleLandLord();
         apartment.postApartments();
