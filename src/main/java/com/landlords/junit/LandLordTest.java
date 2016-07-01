@@ -1,9 +1,9 @@
-package com.landlords;
+package com.landlords.junit;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-import com.landlords.model.Landlord;
+import com.landlords.objects.Landlord;
 import io.restassured.http.ContentType;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,10 +25,11 @@ public class LandLordTest {
     @Test
     public void postLandLord01() {
 
-        Landlord landlord = new Landlord("", "");
+        Landlord landlord = new Landlord("", "", true );
 
         landlord.setFirstName();
         landlord.setLastName();
+
 
         String id = given()
                 .contentType(ContentType.JSON)

@@ -1,16 +1,11 @@
 package com.landlords;
 
 
-import org.junit.Before;
-
 import static io.restassured.RestAssured.baseURI;
 
-public class BaseResource {
+public class HelperMethods {
 
-    @Before
-    public void accessApi(){
+    public void init(){
         baseURI = "http://localhost:8080";
     }
-
-
 }
