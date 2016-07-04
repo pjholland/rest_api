@@ -9,7 +9,7 @@ import org.hamcrest.Matchers;
 
 public class Apartments {
 
-    private String id;
+   // private String id;
     private String address;
     private String features;
     private int price;
@@ -19,7 +19,10 @@ public class Apartments {
 //    private String [] randomAddress = {"London, Bond Street", "Manchester, Grove Street", "Berlin, Halt Stauser", "Sydney, Harbour Road"};
 //       Random random = new Random();
 //       int index = random.nextInt(randomAddress.length);
+
     String apartmentId = null;
+    String id = null;
+
     public Apartments(){
 
     }

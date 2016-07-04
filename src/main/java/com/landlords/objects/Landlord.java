@@ -178,13 +178,14 @@ public class Landlord {
 
     public void postSingleLandLord(){
 
+
         Landlord landlord = new Landlord("Steven", "Fry");
 
      id = given()
                 .contentType(ContentType.JSON)
-                .body("/landlords")
+                .body(landlord)
                 .when()
-                .post("landlords")
+                .post("/landlords")
                 .then().statusCode(201)
                 .extract()
                 .path("id");
