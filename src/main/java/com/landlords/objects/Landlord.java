@@ -5,6 +5,8 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import io.restassured.http.ContentType;
 
+
+
 public class Landlord {
 
     private String  firstName;
@@ -34,7 +36,7 @@ public class Landlord {
 
     public void setFirstName(){
         Fairy fairy = Fairy.create();
-        this.firstName = fairy.person().firstName();
+        this.firstName = fairy.person().getFirstName();
     }
 
     public  String getLastName(){
@@ -43,7 +45,7 @@ public class Landlord {
 
     public void setLastName(){
         Fairy fairy = Fairy.create();
-        this.lastName = fairy.person().firstName();
+        this.lastName = fairy.person().getFirstName();
     }
 
     public Boolean getTrusted() {

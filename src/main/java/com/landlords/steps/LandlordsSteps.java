@@ -34,8 +34,8 @@ public class LandlordsSteps extends LandLordTest {
         landlord.verifyLandlordCreateDetails();
     }
 
-    @And("^all fields have been aded correcly$")
-    public void allFieldsHaveBeenAdedCorrecly() throws Throwable {
+    @And("^all fields have been added correctly$")
+    public void allFieldsHaveBeenAddedCorrectly() throws Throwable {
 
     }
 
